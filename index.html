@@ -8,16 +8,14 @@
         :root {
             --primary: #0f4c4a;
             --accent: #e07a5f;
-            --accent-hover: #f4a261;
             --text-dark: #1d3557;
-            /* Premium Sea Glass Tint Background */
-            --card-bg: rgba(240, 247, 246, 0.98);
+            /* Premium Coastal Card: Soft Sand & Light Sea Foam Gradient */
+            --card-bg: linear-gradient(145deg, #fdfcfb 0%, #eefbf9 100%);
             --bg-gradient: linear-gradient(135deg, #072e2d 0%, #0f4c4a 40%, #2a9d8f 100%);
-            --input-bg: #ffffff;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: var(--bg-gradient);
             color: var(--text-dark);
             margin: 0;
@@ -26,19 +24,17 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            box-sizing: border-box;
         }
 
         .card {
+            /* Now using the sandy-gradient background instead of plain white */
             background: var(--card-bg);
             padding: 35px 25px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-radius: 28px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
             max-width: 410px;
             width: 100%;
-            box-sizing: border-box;
-            border: 1.5px solid rgba(42, 157, 143, 0.3);
-            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .header {
@@ -46,84 +42,61 @@
             margin-bottom: 28px;
         }
 
-        /* Forces the square image to cut perfectly into a clean circle, hiding the black bars */
+        /* Minimalist Thin Gold Ring */
         .brand-logo {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             display: block;
-            margin: 0 auto 12px auto;
-            border-radius: 50% !important; /* Strict circle force */
-            object-fit: cover !important;  /* Crops inside the circle tightly */
-            box-sizing: border-box;
-            
-            /* Premium Luxury 3D Metallic Gold Ring */
-            border: 4px solid transparent;
-            background: linear-gradient(#f0f7f6, #f0f7f6) padding-box,
-                        linear-gradient(145deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%) border-box;
-            
-            /* Gold Metallic Glow Effect */
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5), 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 0 auto 15px auto;
+            object-fit: cover;
+            border-radius: 50%;
+            /* Thin 2px gold border */
+            border: 2px solid #d4af37;
+            box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
         }
 
         .header h1 {
-            font-size: 28px;
+            font-size: 26px;
             margin: 5px 0;
             color: var(--primary);
             font-weight: 800;
-            letter-spacing: -0.5px;
         }
 
         .header p {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--accent);
-            margin: 0;
-            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
+            font-weight: 700;
         }
 
         .welcome-text {
-            font-size: 14.5px;
+            font-size: 15px;
             line-height: 1.6;
-            color: #2c4442;
+            color: #4a5d5b;
             text-align: center;
             margin-bottom: 25px;
-            padding: 0 5px;
-            font-weight: 500;
         }
 
-        .form-group {
-            margin-bottom: 18px;
-        }
+        .form-group { margin-bottom: 18px; }
 
         label {
             display: block;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             margin-bottom: 6px;
             color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         input[type="date"], select {
             width: 100%;
-            padding: 14px;
-            border: 2px solid rgba(15, 76, 74, 0.15);
-            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid #d1d9d8;
+            border-radius: 10px;
             font-size: 15px;
-            box-sizing: border-box;
-            background-color: var(--input-bg);
+            background-color: #ffffff;
             color: var(--text-dark);
-            font-family: inherit;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        input[type="date"]:focus, select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(15, 76, 74, 0.15);
         }
 
         .btn-submit {
@@ -131,69 +104,42 @@
             background-color: var(--accent);
             color: white;
             border: none;
-            padding: 16px;
+            padding: 15px;
             font-size: 16px;
             font-weight: 700;
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 12px;
-            box-shadow: 0 6px 15px rgba(224, 122, 95, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-submit:hover {
-            background-color: #d0694e;
-            box-shadow: 0 8px 20px rgba(224, 122, 95, 0.5);
-        }
-
-        .btn-submit:active {
-            transform: scale(0.98);
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(224, 122, 95, 0.3);
         }
 
         .quick-links {
-            margin-top: 30px;
-            padding-top: 22px;
-            border-top: 2px dashed rgba(15, 76, 74, 0.2);
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #d1d9d8;
         }
 
         .quick-links h3 {
-            font-size: 11px;
-            margin: 0 0 14px 0;
-            color: #5c7572;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 800;
+            font-size: 10px;
+            color: #889997;
             text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
         .link-item {
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
             text-decoration: none;
             color: var(--primary);
-            font-weight: 700;
+            font-weight: 600;
             font-size: 14px;
-            padding: 12px 16px;
-            border-radius: 12px;
-            background-color: rgba(255, 255, 255, 0.7);
-            transition: all 0.2s ease;
-            border: 1px solid rgba(15, 76, 74, 0.1);
-        }
-
-        .link-item span {
-            margin-right: 12px;
-            font-size: 18px;
-        }
-
-        .link-item:hover {
-            background-color: #ffffff;
-            border-color: rgba(224, 122, 95, 0.4);
-            color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            padding: 10px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 10px;
+            border: 1px solid #e1e8e7;
         }
     </style>
 </head>
@@ -207,70 +153,47 @@
     </div>
 
     <p class="welcome-text">
-        Thank you for reaching out! We would love to host your next staycation escape at Ramapuram Beach. Choose your dates below to check availability instantly.
+        Thank you for reaching out! We would love to host your next staycation at Ramapuram Beach. Choose your dates below to check availability.
     </p>
 
     <form id="bookingForm">
         <div class="form-group">
-            <label for="checkin">📅 Check-in Date</label>
+            <label>📅 Check-in Date</label>
             <input type="date" id="checkin" required>
         </div>
-
         <div class="form-group">
-            <label for="checkout">📅 Check-out Date</label>
+            <label>📅 Check-out Date</label>
             <input type="date" id="checkout" required>
         </div>
-
         <div class="form-group">
-            <label for="guests">👥 Number of Guests</label>
-            <select id="guests" required>
+            <label>👥 Guests</label>
+            <select id="guests">
                 <option value="1">1 Guest</option>
                 <option value="2">2 Guests</option>
                 <option value="3">3 Guests</option>
                 <option value="4">4 Guests</option>
-                <option value="5">5 Guests</option>
-                <option value="6+">6+ Guests</option>
             </select>
         </div>
-
         <button type="submit" class="btn-submit">Check Availability</button>
     </form>
 
     <div class="quick-links">
-        <h3>📍 Quick Links & Info</h3>
-        <a href="https://files.catbox.moe/in4x0x.png" target="_blank" class="link-item">
-            <span>📋</span> Sea Zoe Brochure (Rates & Amenities)
-        </a>
-        <a href="https://maps.app.goo.gl/uPDe7oLjNEi8UJxF7?g_st=ac" target="_blank" class="link-item">
-            <span>📍</span> Location & Directions
-        </a>
+        <h3>📍 Quick Links</h3>
+        <a href="https://files.catbox.moe/in4x0x.png" target="_blank" class="link-item">📋 Sea Zoe Brochure</a>
+        <a href="https://maps.app.goo.gl/uPDe7oLjNEi8UJxF7?g_st=ac" target="_blank" class="link-item">📍 Location</a>
     </div>
 </div>
 
 <script>
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('checkin').min = today;
-    document.getElementById('checkout').min = today;
-
-    document.getElementById('checkin').addEventListener('change', function() {
-        document.getElementById('checkout').min = this.value;
-    });
-
     document.getElementById('bookingForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        
         const checkin = document.getElementById('checkin').value;
         const checkout = document.getElementById('checkout').value;
         const guests = document.getElementById('guests').value;
-
-        const message = `Hii, Sea Zoe Beach Homes Staycation! I'd like to check availability for a staycation:\n\n📅 Check-in: ${checkin}\n📅 Check-out: ${checkout}\n👥 Guests: ${guests}`;
-        
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappNumber = "919490675816"; 
-        
-        window.location.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        const msg = `Hi, I'd like to check availability:\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nGuests: ${guests}`;
+        window.location.href = `https://wa.me/919490675816?text=${encodeURIComponent(msg)}`;
     });
 </script>
 
 </body>
-    </html>
+</html>
