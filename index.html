@@ -6,113 +6,132 @@
     <title>Welcome to Sea Zoe Beach Homes</title>
     <style>
         :root {
-            --primary: #1e5e5c;
-            --secondary: #d4a373;
-            --background: #ffffff;
-            --text: #1a2e2b;
-            --light-bg: #f4ece1;
+            --primary: #0f4c4a;
+            --accent: #e07a5f;
+            --accent-hover: #f4a261;
+            --text-dark: #1d3557;
+            --card-bg: #ffffff;
+            --bg-gradient: linear-gradient(135deg, #072e2d 0%, #0f4c4a 40%, #2a9d8f 100%);
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text);
+            background: var(--bg-gradient);
+            color: var(--text-dark);
             margin: 0;
-            padding: 20px;
+            padding: 24px 16px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            box-sizing: border-box;
         }
 
         .card {
-            background: var(--background);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(26, 46, 43, 0.08);
-            max-width: 420px;
+            background: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            max-width: 410px;
             width: 100%;
             box-sizing: border-box;
-            border: 1px solid rgba(212, 163, 115, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
         }
 
         .header {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 28px;
+        }
+
+        .brand-icon {
+            font-size: 50px;
+            display: block;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
         }
 
         .header h1 {
-            font-size: 26px;
-            margin: 10px 0 5px 0;
+            font-size: 28px;
+            margin: 5px 0;
             color: var(--primary);
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: -0.5px;
         }
 
         .header p {
-            font-size: 13px;
-            color: var(--secondary);
+            font-size: 12px;
+            color: var(--accent);
             margin: 0;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         .welcome-text {
-            font-size: 14.5px;
+            font-size: 14px;
             line-height: 1.6;
-            color: #4a5554;
+            color: #4f6361;
             text-align: center;
             margin-bottom: 25px;
+            padding: 0 5px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         label {
             display: block;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         input[type="date"], select {
             width: 100%;
             padding: 14px;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 16px;
+            border: 2px solid #e5e9e9;
+            border-radius: 12px;
+            font-size: 15px;
             box-sizing: border-box;
-            background-color: #fff;
-            color: var(--text);
+            background-color: #f9fbfb;
+            color: var(--text-dark);
             font-family: inherit;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         input[type="date"]:focus, select:focus {
             outline: none;
-            border-color: var(--secondary);
-            box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.15);
+            border-color: var(--primary);
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(15, 76, 74, 0.1);
         }
 
         .btn-submit {
             width: 100%;
-            background-color: var(--primary);
+            background-color: var(--accent);
             color: white;
             border: none;
-            padding: 15px;
+            padding: 16px;
             font-size: 16px;
-            font-weight: bold;
-            border-radius: 10px;
+            font-weight: 700;
+            border-radius: 12px;
             cursor: pointer;
-            transition: background 0.2s, transform 0.1s;
-            margin-top: 10px;
-            box-shadow: 0 4px 12px rgba(30, 94, 92, 0.2);
+            transition: all 0.3s ease;
+            margin-top: 12px;
+            box-shadow: 0 6px 15px rgba(224, 122, 95, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn-submit:hover {
-            background-color: #164745;
+            background-color: #d0694e;
+            box-shadow: 0 8px 20px rgba(224, 122, 95, 0.4);
         }
 
         .btn-submit:active {
@@ -120,18 +139,19 @@
         }
 
         .quick-links {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #f1f5f9;
+            margin-top: 30px;
+            padding-top: 22px;
+            border-top: 2px dashed #e5e9e9;
         }
 
         .quick-links h3 {
-            font-size: 12px;
+            font-size: 11px;
             margin: 0 0 14px 0;
-            color: #8c9b98;
+            color: #8fa3a1;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            text-align: center;
         }
 
         .link-item {
@@ -140,22 +160,26 @@
             margin-bottom: 12px;
             text-decoration: none;
             color: var(--primary);
-            font-weight: 600;
-            font-size: 14.5px;
-            padding: 10px;
-            border-radius: 8px;
-            background-color: #f8fafc;
-            transition: background 0.2s;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background-color: #f0f6f6;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
         }
 
         .link-item span {
             margin-right: 12px;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .link-item:hover {
-            background-color: #f1f5f9;
-            color: #164745;
+            background-color: #ffffff;
+            border-color: rgba(42, 157, 143, 0.3);
+            color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
     </style>
 </head>
@@ -163,13 +187,13 @@
 
 <div class="card">
     <div class="header">
-        <span style="font-size: 45px;">🌊🏡</span>
+        <span class="brand-icon">🌊🏡</span>
         <h1>Sea Zoe Beach Homes</h1>
         <p>Staycation Escape</p>
     </div>
 
     <p class="welcome-text">
-        Thank you for reaching out! We would love to host your next staycation. Please select your preferred dates and guest count below to check availability.
+        Thank you for reaching out! We would love to host your next staycation escape at Ramapuram Beach. Choose your dates below to check availability instantly.
     </p>
 
     <form id="bookingForm">
@@ -200,8 +224,8 @@
 
     <div class="quick-links">
         <h3>📍 Quick Links & Info</h3>
-        <a href="https://www.instagram.com/seazoebeachhomes" target="_blank" class="link-item">
-            <span>📋</span> View Our Rates & Amenities
+        <a href="https://files.catbox.moe/tlehx3.pdf" target="_blank" class="link-item">
+            <span>📋</span> Sea Zoe Brochure (Rates & Amenities)
         </a>
         <a href="https://maps.app.goo.gl/uPDe7oLjNEi8UJxF7?g_st=ac" target="_blank" class="link-item">
             <span>📍</span> Location & Directions
